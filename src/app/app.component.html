@@ -1,0 +1,39 @@
+<mat-toolbar id="header-bar" class="header-bar-color">
+  <mat-icon (click)="drawer.toggle()" id="expand-icon" class="white-color">menu</mat-icon>
+  <div class="header-padding-medium x-hidden x-100">
+    <a routerLink="Home" title="首页" class="mat_toolbar">{{"l_home" | langPipe}}</a>
+    <a routerLink="Personal" title="个人信息" class="mat_toolbar small-hidden">{{"l_personal" | langPipe}}</a><!-- 个人信息 -->
+    <a routerLink="Education" title="学历" class="mat_toolbar small-hidden ">{{"l_education" | langPipe}}</a><!-- 教育经历 -->
+    <a routerLink="Work" title="工作经历" class="mat_toolbar small-hidden">{{"l_work" | langPipe}}</a><!-- 工作经历 -->
+    <a routerLink="Project" title="项目经验" class="mat_toolbar small-hidden">{{"l_project" | langPipe}}</a><!-- 项目经验 -->
+    <a routerLink="Job" title="求职意向" class="mat_toolbar small-hidden">{{"l_job" | langPipe}}</a><!-- 求职意向 -->
+    <a routerLink="Evaluation" title="自我评价" class="mat_toolbar small-hidden">{{"l_evaluation" | langPipe}}</a><!-- 自我评价 -->
+
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item (click)="switchLang($event)">中文</button>
+      <button mat-menu-item (click)="switchLang($event)">English</button>
+    </mat-menu>
+    <div [matMenuTriggerFor]="appMenu" class="lang-sel">
+        <a >{{language}}</a>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="background-fit">
+  <mat-drawer mode="push" #drawer class="mat-drawer side-bar-color nav-container">
+    <div *ngFor="let item of sideBarItemArray">
+      <app-side-bar-item [sideBarItem]="item" (hideContainer)="drawer.toggle()"></app-side-bar-item>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content  (click)="drawer.close()">
+    <particles [params]="particalParams" class="back-partical" ></particles>
+    <div class="body-container">
+        <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+

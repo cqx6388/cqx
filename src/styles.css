@@ -1,0 +1,273 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    width: 100%;
+    height: 100%; 
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.body-container{
+    /* text-align:center; */
+    padding:0px 25px;
+    height: 100%;
+    overflow-y: auto;
+    /* background-image: url("assets/background.jpg") */
+}
+
+#header-bar{
+    height: 64px;
+}
+
+.background-fit{
+    height:calc(100% - 64px);
+}
+
+.header-bar-color{
+    background-color: #338750;
+}
+
+.side-bar-color{
+    background-color: #e1f8ed;
+}
+
+.mat_toolbar{
+    color: #fff; 
+    padding:10px 10px 10px 10px;
+}
+  
+.mat-drawer{
+    width: 200px;
+}
+
+.header-padding-medium{
+    padding: 10px 10px 10px 10px;
+}
+
+a{
+    color: #000;
+    text-decoration:none;
+}
+
+.show-style{
+    text-align:center;
+}
+
+/* .drawer-size{
+    height: 800px;
+} */
+
+.border-skill{
+    width: 400px;
+    height: 200px;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 10px auto;
+    text-align:center;
+}
+
+.border-skill-large{
+    width: 600px;
+    height: 500px;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 10px auto;
+    text-align:center;
+}
+
+.photo-style{
+    border: green;
+    border-radius: 50%;
+    border-style: dashed;
+    margin: 30px 20px;
+    transition: border-radius 2s;
+}
+
+.photo-style:hover{
+    transition: border-radius 2s;
+    border-radius: 0;
+}
+
+.font-heavy{
+    font-weight: 700;
+}
+
+/* .background-color{
+    background-color:lightskyblue;
+} */
+.nav-container{
+    padding-top: 10px; 
+}
+
+.nav-container>div>div{
+    padding-top: 5px; 
+}
+
+.nav-button{
+    text-align: left !important;
+    font-size: 20px;
+}
+
+.nav-button-container{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-button-icon{
+    font-size: 20px;
+}
+
+.collapse{
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .2s;
+}
+
+.expanded{
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height .2s;
+}
+
+.icon-collapse{
+    transform: rotate(0deg);
+    transition: transform .5s;
+}
+
+.icon-expanded{
+    transform: rotate(90deg);
+    transition: transform .5s;
+}
+
+.echarts-style{
+    padding:20px 10px;
+}
+
+.white-color{
+    color: white;
+}
+
+.x-hidden{
+    overflow-x: hidden;
+}
+/* @keyframes collapse-animation
+{
+    0%   {max-height: none}
+    100% {max-height: 0px;}
+}
+
+@keyframes expand-animation
+{
+    0%   {max-height: 0px;}
+    100% {}
+} */
+
+@media screen and (max-width: 900px) {
+    .edu-style {
+        width: 300px;
+     }  
+     .small-hidden{
+         display: none;
+     }        
+}
+
+@media screen and (min-width: 901px) {
+    .edu-style {
+        width: 600px;
+     }        
+}
+
+.x-100{
+    width: 100%
+}
+
+.lang-sel{
+    float: right;
+    color: #ffffff;
+    align-items: center;
+    display: flex;
+}
+
+.lang-sel>a{
+    color: #ffffff;
+}
+
+.home-card{
+    width: 100%;
+}
+
+.home-item{
+    height: auto !important;
+    margin: 30px 0;
+}
+
+.cqx-header-avatar{
+    background-image: url(assets/avatar1.jpg)
+}
+
+.cc-header-avatar{
+    background-image: url(assets/h2.png)
+}
+
+.jxb-header-avatar{
+    background-image: url(assets/jxb1.png)
+}
+
+.xnkd-header-avatar{
+    background-image: url(assets/school-avatar.png)
+}
+
+#expand-icon{
+    padding: 5px
+}
+
+.nav-button-link{
+    padding-left: 15px !important;
+}
+
+.back-partical{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #a3e2cf;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+}
+
+.particles-container{
+    height: 100%
+}
+
+.basic-row{
+    width: 100%;
+    padding: 10px;
+}
+
+.basic-header{
+    font-size: 18px;
+    padding: 10px 5px;
+}
+
+.basic-content{
+    width: 100%;
+    font-size: 16px;
+}
+
+.basic-content>div{
+    padding: 5px 5px;
+
+}
+
+.mat-drawer-content{
+    overflow:hidden !important;
+}
+
+.knowmore-btn{
+    background-color: #338750;
+    color: #fff
+}

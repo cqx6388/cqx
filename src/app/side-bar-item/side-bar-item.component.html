@@ -1,0 +1,30 @@
+<div>
+    <div class="nav-button-container" (click)="navToggle()">
+        <span class="nav-button">
+            <div>
+                <div *ngIf="sideBarItem.items.length === 0;else other_content">
+                    <a [routerLink]="sideBarItem.router" (click)='hideEvent($event)'>{{sideBarItem.title}}</a>
+                </div>
+
+                <ng-template #other_content>{{sideBarItem.title}}</ng-template>
+            </div>
+        </span>
+
+        <mat-icon [class.icon-collapse]="!expanded" [class.icon-expanded]="expanded"
+            *ngIf="sideBarItem.items.length > 0">keyboard_arrow_right</mat-icon>
+    </div>
+
+    <div *ngIf="sideBarItem.items.length > 0">
+        <mat-nav-list [class.collapse]="!expanded" [class.expanded]="expanded">
+            <mat-list-item *ngFor="let item of sideBarItem.items">
+                <a matLine [routerLink]="item.router" (click)="hideEvent($event)" class="nav-button-link">{{item.name}}</a>
+            </mat-list-item>
+        </mat-nav-list>
+    </div>
+
+    <!-- <mat-nav-list [class.collapse]="!expanded" [class.expanded]="expanded">
+        <mat-list-item *ngFor="let item of sideBarItem.items">
+            <a matLine [routerLink]="item.router">{{item.name}}</a>
+        </mat-list-item>
+    </mat-nav-list> -->
+</div>
