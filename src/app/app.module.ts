@@ -30,6 +30,7 @@ import { LangPipePipe } from './lang-pipe.pipe';
 import { LanguageService } from './language.service';
 
 import {ParticlesModule} from 'angular-particle';
+// import { NgxCarousel3dModule }  from 'ngx-carousel-3d';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,7 @@ import {ParticlesModule} from 'angular-particle';
     MatMenuModule,
     MatDividerModule,
     MatCardModule,
-    ParticlesModule
+    ParticlesModule,
   ],
   providers: [LanguageService],
   bootstrap: [AppComponent]

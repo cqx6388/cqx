@@ -208,6 +208,12 @@ a{
     background-image: url(assets/avatar1.jpg)
 }
 
+.mat-card-image.cqx-image{
+    max-width: 500px;
+    width: 100% ;
+    margin: 0px;
+}
+
 .cc-header-avatar{
     background-image: url(assets/h2.png)
 }
@@ -254,7 +260,7 @@ a{
 }
 
 .basic-content{
-    width: 100%;
+    /* width: 100%; */
     font-size: 16px;
 }
 
@@ -270,4 +276,27 @@ a{
 .knowmore-btn{
     background-color: #338750;
     color: #fff
+}
+
+.mat-card-image.edu-image{
+    width: 50%;
+    margin: 10px;
+}
+.skill-div{
+    display: flex; 
+    justify-content: flex-start;
+}
+
+.skill-picture-div{
+    max-width: 300px; 
+    min-width: 150px; 
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: wrap; 
+    padding-left: 25px
+}
+.skill-picture{
+    width: 60px; 
+    height: 60px; 
+    padding: 7px
 }

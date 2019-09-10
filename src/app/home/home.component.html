@@ -6,6 +6,8 @@
                 <mat-card-title>{{"h_name" | langPipe}}</mat-card-title>
                 <mat-card-subtitle>{{"h_self" | langPipe}}</mat-card-subtitle>
             </mat-card-header>
+
+            <img mat-card-image [class.collapse]="!showMphoto" [class.expanded]="showMphoto" class="cqx-image" src="assets/my.png" alt="Photo of a person">
             <mat-card-content>
                 <p>
                         {{"h_self_describe1" | langPipe}}<br/>
@@ -16,11 +18,12 @@
             </mat-card-content>
             <mat-card-actions>
                 <button mat-button routerLink="/Personal">更多</button>
-                <button mat-button>展开</button>
+                <button mat-button (click)="showClick($event)">展开</button>
             </mat-card-actions>
-        </mat-card>
+        </mat-card> 
     </mat-list-item>
     <mat-divider></mat-divider>
+
     <mat-list-item class="home-item">
         <mat-card class="home-card">
                 <mat-card-header>
@@ -28,6 +31,7 @@
                     <mat-card-title>{{"h_name_h" | langPipe}}</mat-card-title>
                     <mat-card-subtitle>{{"h_self_h" | langPipe}}</mat-card-subtitle>
                 </mat-card-header>
+                <img mat-card-image [class.collapse]="!showHphoto" [class.expanded]="showHphoto" class="cqx-image" src="assets/hus.png" alt="Photo of a person">
                 <mat-card-content>
                     <p>
                         {{"h_self_describe1_h" | langPipe}}<br/>
@@ -35,11 +39,12 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>展开</button>
+                    <button mat-button (click)="showHClick($event)">展开</button>
                 </mat-card-actions>
             </mat-card>
     </mat-list-item>
     <mat-divider></mat-divider>
+
     <mat-list-item class="home-item">
         <mat-card class="home-card">
                 <mat-card-header>
@@ -47,6 +52,7 @@
                     <mat-card-title>{{"h_name_j" | langPipe}}</mat-card-title>
                     <mat-card-subtitle>{{"h_self_j" | langPipe}}</mat-card-subtitle>
                 </mat-card-header>
+                <img mat-card-image [class.collapse]="!showJphoto" [class.expanded]="showJphoto" class="cqx-image" src="assets/jxb2.png" alt="Photo of a person">
                 <mat-card-content>
                     <p>
                         {{"h_self_describe1_j" | langPipe}}<br/>
@@ -57,7 +63,7 @@
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>展开</button>
+                    <button mat-button (click)="showJClick($event)">展开</button>
                 </mat-card-actions>
             </mat-card>
     </mat-list-item>

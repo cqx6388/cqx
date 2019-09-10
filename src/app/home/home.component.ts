@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = `Chenqiuxia's Resume`;
-  constructor() { }
+  showMphoto = false;
+  showHphoto = false;
+  showJphoto = false;
+
+  constructor() {}
 
   ngOnInit() {
   }
 
+  showClick($event) {
+    this.showMphoto = !this.showMphoto;
+  }
+
+  showHClick($event) {
+    this.showHphoto = !this.showHphoto;
+  }
+
+  showJClick($event) {
+    this.showJphoto = !this.showJphoto;
+  }
 }
