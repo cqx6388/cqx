@@ -28,10 +28,11 @@ import { MatCardModule } from '@angular/material/card';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { LangPipePipe } from './lang-pipe.pipe';
 import { LanguageService } from './language.service';
+import { VisitorRegService } from './visitor-reg.service';
 
 import {ParticlesModule} from 'angular-particle';
-// import { NgxCarousel3dModule }  from 'ngx-carousel-3d';
-
+import { VisitorComponent } from './visitor/visitor.component';
+import { FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import {ParticlesModule} from 'angular-particle';
     EvaluationComponent,
     SideBarItemComponent,
     HomeComponent,
-    LangPipePipe
+    LangPipePipe,
+    VisitorComponent
   ],
   imports: [
     BrowserModule,
@@ -60,8 +62,12 @@ import {ParticlesModule} from 'angular-particle';
     MatDividerModule,
     MatCardModule,
     ParticlesModule,
+    FormsModule
   ],
-  providers: [LanguageService],
+  providers: [
+    LanguageService,
+    VisitorRegService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

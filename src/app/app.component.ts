@@ -15,6 +15,7 @@ export class AppComponent {
   job = new SideBarItem();
   work = new SideBarItem();
   evaluation = new SideBarItem();
+  visitor = new SideBarItem();
   sideBarItemArray: Array<SideBarItem>;
   language = '中文';
   particalParams: any;
@@ -53,11 +54,7 @@ export class AppComponent {
       {
         name: '职位',
         router: '/Job'
-      },
-      {
-        name: '期望薪资',
-        router: '/Job'
-      },
+      }
     ];
 
     this.work.title = '工作经历';
@@ -72,7 +69,12 @@ export class AppComponent {
     this.evaluation.router = '/Evaluation';
     this.evaluation.items = [];
 
+    this.visitor.title = '来客登记';
+    this.visitor.router = '/Visitor';
+    this.visitor.items = [];
+
     this.sideBarItemArray = [this.personal, this.education, this.project, this.job, this.work, this.evaluation];
+    // this.sideBarItemArray = [this.personal, this.education, this.project, this.job, this.work, this.evaluation, this.visitor];
 
     this.langService.getLanguagePackage('中文').subscribe();
 

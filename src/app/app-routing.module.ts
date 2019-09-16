@@ -7,6 +7,7 @@ import { WorkComponent } from './work/work.component';
 import { ProjectComponent } from './project/project.component';
 import { JobComponent } from './job/job.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
+import { VisitorComponent } from './visitor/visitor.component';
 
 const routes: Routes = [
   { path: 'Personal', component: PersonalComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'Project', component: ProjectComponent },
   { path: 'Job', component: JobComponent },
   { path: 'Evaluation', component: EvaluationComponent },
+  { path: 'Visitor', component: VisitorComponent },
   { path: '', redirectTo: 'Home', pathMatch: 'full'},
 ];
 

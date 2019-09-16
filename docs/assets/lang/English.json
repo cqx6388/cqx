@@ -6,6 +6,7 @@
     "l_project":"Project",
     "l_job":"Job",
     "l_evaluation":"Evaluation",
+    "l_visitor":"Visitor",
     "h_name":"QiuxiaChen",
     "h_self":"Myself",
     "h_self_describe1":"My hometown is Sichuan, China.",
@@ -13,8 +14,8 @@
     "h_self_describe3":"I spent my free time reading or cooking.",
     "h_self_describe4":"I grow flowers and tomatoes, but they don't grow very well.",
     "h_name_h":"ChenChen",
-    "h_self_h":"My lover",
-    "h_self_describe1_h":"My lover, he works for Siemens.",
+    "h_self_h":"My honey",
+    "h_self_describe1_h":"My honey, he works for Siemens.",
     "h_self_describe2_h":"His job is motor drive and web engineer.",
     "h_name_j":"XiaobaiJiang",
     "h_self_j":"Grain Reserve",
@@ -36,5 +37,9 @@
     "p_lang":"Programing Language",
     "p_plat":"Programming Platform",
     "p_communication":"Communication Protocol",
-    "p_english":"English: Skilled reading"
+    "p_english":"English: Skilled reading",
+    "v_surname":"Surname",
+    "v_company":"Company",
+    "v_telnumber":"Tel",
+    "v_confirm":"Confirm"
 }

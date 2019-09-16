@@ -6,6 +6,7 @@
     "l_project":"项目经验",
     "l_job":"求职意向",
     "l_evaluation":"自我评价",
+    "l_visitor":"来客登记",
     "h_name":"陈秋霞",
     "h_self":"本人",
     "h_self_describe1":"我出生在中国四川。",
@@ -14,8 +15,8 @@
     "h_self_describe4":"还养了花和番茄，但是不知道为啥花长不好拜拜了，番茄还可以，能吃",
     "h_name_h":"陈辰",
     "h_self_h":"亲爱的",
-    "h_self_describe1_h":"老公任职于西门子",
-    "h_self_describe2_h":"他是电机驱动工程师和前端开发工程师",
+    "h_self_describe1_h":"为西门子搬砖加瓦码代码，发际线浓密，由此可见相对于程序当然是更爱我",
+    "h_self_describe2_h":"江小白的衣食爸爸",
     "h_name_j":"江小白",
     "h_self_j":"储备粮",
     "h_self_describe1_j":"一只可爱的中华田园犬，今年三岁啦",
@@ -36,5 +37,9 @@
     "p_lang":"编程语言",
     "p_plat":"编程平台",
     "p_communication":"通讯协议",
-    "p_english":"英语: 熟练阅读"
+    "p_english":"英语: 熟练阅读",
+    "v_surname":"姓氏",
+    "v_company":"公司",
+    "v_telnumber":"电话",
+    "v_confirm":"确定"
 }

@@ -1,0 +1,27 @@
+<div style="text-align: center">
+    <h2>来客登记</h2>
+
+    <div class="infor-style">
+        <div class="li-style">{{"v_surname" | langPipe}}: <input type="text" [(ngModel)]="information.surname"></div>
+        <div class="li-style">{{"v_company" | langPipe}}: <input type="text" [(ngModel)]="information.company"></div>
+        <div class="li-style">{{"v_telnumber" | langPipe}}: <input type="text" [(ngModel)]="information.telNumber"></div>
+        <button (click)="confirmClick($event)" class="confirm-style">{{"v_confirm" | langPipe}}</button>
+    </div>
+
+    <div>
+        <li *ngFor="let item of inforArray;let i=index">
+            <span style="color: blue">姓氏：{{item.surname }}</span>
+            <span style="color:black"> 公司：{{item.company }}</span>
+            <span style="color:chocolate"> 电话：{{item.telNumber }}</span>
+            <span>
+                <button (click)="removeList(i)" class="remove-style">remove</button>
+            </span>
+        </li>
+    </div>
+</div>
+
+<form action="post" method="post">
+    <p>First name: <input type="text" name="fname" /></p>
+    <p>Last name: <input type="text" name="lname" /></p>
+    <input type="submit" value="Submit" />
+</form>
