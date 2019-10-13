@@ -53,6 +53,20 @@
                     <mat-card-subtitle>{{"h_self_j" | langPipe}}</mat-card-subtitle>
                 </mat-card-header>
                 <img mat-card-image [class.collapse]="!showJphoto" [class.expanded]="showJphoto" class="cqx-image" src="assets/jxb2.jpg" alt="Photo of a person">
+                
+                <video #dogVideo [class.collapse]="!showJphoto" [class.expanded]="showJphoto" src="assets/jxb.mp4" class="video-style" controls="controls" id="myVideo">
+                    Your browser does not support the video tag.
+                </video>
+
+                <canvas #dogCanvas width="320" height="300" [class.collapse]="!showJphoto" [class.expanded]="showJphoto" class="canvas-style">
+                    Your browser does not support the canvas element.
+                </canvas>
+
+                 <svg  width="320" height="190" [class.collapse]="!showJphoto" [class.expanded]="showJphoto"> <!-- xmlns="http://www.w3.org/2000/svg" version="1.1" -->
+                    <polygon points="100,10 40,180 190,60 10,60 160,180"
+                    style="fill:red;stroke:blue;stroke-width:3;fill-rule:evenodd;" />
+                 </svg>
+                    
                 <mat-card-content>
                     <p>
                         {{"h_self_describe1_j" | langPipe}}<br/>

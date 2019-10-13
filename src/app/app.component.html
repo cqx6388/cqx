@@ -1,6 +1,6 @@
 <mat-toolbar id="header-bar" class="header-bar-color">
   <mat-icon (click)="drawer.toggle()" id="expand-icon" class="white-color">menu</mat-icon>
-  <div class="header-padding-medium x-hidden x-100">
+  <div class="header-padding-medium x-hidden">
     <a routerLink="Home" title="首页" class="mat_toolbar">{{"l_home" | langPipe}}</a>
     <a routerLink="Personal" title="个人信息" class="mat_toolbar small-hidden">{{"l_personal" | langPipe}}</a><!-- 个人信息 -->
     <a routerLink="Education" title="学历" class="mat_toolbar small-hidden ">{{"l_education" | langPipe}}</a><!-- 教育经历 -->
@@ -9,17 +9,19 @@
     <a routerLink="Job" title="求职意向" class="mat_toolbar small-hidden">{{"l_job" | langPipe}}</a><!-- 求职意向 -->
     <a routerLink="Evaluation" title="自我评价" class="mat_toolbar small-hidden">{{"l_evaluation" | langPipe}}</a><!-- 自我评价 -->
     <!-- <a routerLink="Visitor" title="来客登记" class="mat_toolbar small-hidden">{{"l_visitor" | langPipe}}</a> -->
-
-    <mat-menu #appMenu="matMenu">
-      <button mat-menu-item (click)="switchLang($event)">中文</button>
-      <button mat-menu-item (click)="switchLang($event)">English</button>
-    </mat-menu>
-    <div [matMenuTriggerFor]="appMenu" class="lang-sel">
-        <a >{{language}}</a>
-        <mat-icon>keyboard_arrow_down</mat-icon>
-    </div>
-
   </div>
+
+  <audio src="assets/west.mp3" controls="controls" class="audio-style" autoplay="autoplay" loop="loop">音乐播放器</audio>
+
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item (click)="switchLang($event)">中文</button>
+    <button mat-menu-item (click)="switchLang($event)">English</button>
+  </mat-menu>
+  <div [matMenuTriggerFor]="appMenu" class="lang-sel">
+      <a >{{language}}</a>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+  </div>
+
 </mat-toolbar>
 
 <mat-drawer-container class="background-fit">

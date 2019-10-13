@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +10,12 @@ export class HomeComponent implements OnInit {
   showMphoto = false;
   showHphoto = false;
   showJphoto = false;
+  img: any;
 
-  constructor() {}
+  @ViewChild('dogVideo', { static: true }) private myVid: ElementRef;
+  @ViewChild('dogCanvas', { static: true }) private myCanvas: ElementRef;
+
+  constructor() { }
 
   ngOnInit() {
   }
@@ -26,5 +30,18 @@ export class HomeComponent implements OnInit {
 
   showJClick($event) {
     this.showJphoto = !this.showJphoto;
+    this.myVid.nativeElement.volume = 0.04;
+    this.myVid.nativeElement.loop = true;
+    if (this.showJphoto) {
+      this.myVid.nativeElement.play();
+
+      this.img = new Image();
+      this.img.src = 'assets/jxb3.jpg';
+
+      const context = this.myCanvas.nativeElement.getContext('2d');
+      this.img.onload = () => context.drawImage(this.img, 10, 0, 300, 300);
+    } else {
+      this.myVid.nativeElement.pause();
+    }
   }
 }
