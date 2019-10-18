@@ -7,78 +7,78 @@
                 <mat-card-subtitle>{{"h_self" | langPipe}}</mat-card-subtitle>
             </mat-card-header>
 
-            <img mat-card-image [class.collapse]="!showMphoto" [class.expanded]="showMphoto" class="cqx-image" src="assets/my.jpg" alt="Photo of a person">
+            <img mat-card-image [class.collapse]="!showMphoto" [class.expanded]="showMphoto" class="cqx-image"
+                src="assets/my.jpg" alt="Photo of a person">
             <mat-card-content>
                 <p>
-                        {{"h_self_describe1" | langPipe}}<br/>
-                        {{"h_self_describe2" | langPipe}}<br/>
-                        {{"h_self_describe3" | langPipe}}<br/>
-                        {{"h_self_describe4" | langPipe}}<br/>
+                    {{"h_self_describe1" | langPipe}}<br />
+                    {{"h_self_describe2" | langPipe}}<br />
+                    {{"h_self_describe3" | langPipe}}<br />
+                    {{"h_self_describe4" | langPipe}}<br />
                 </p>
             </mat-card-content>
             <mat-card-actions>
                 <button mat-button routerLink="/Personal">更多</button>
                 <button mat-button (click)="showClick($event)">展开</button>
             </mat-card-actions>
-        </mat-card> 
+        </mat-card>
     </mat-list-item>
     <mat-divider></mat-divider>
 
     <mat-list-item class="home-item">
         <mat-card class="home-card">
-                <mat-card-header>
-                    <div mat-card-avatar class="cc-header-avatar"></div>
-                    <mat-card-title>{{"h_name_h" | langPipe}}</mat-card-title>
-                    <mat-card-subtitle>{{"h_self_h" | langPipe}}</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image [class.collapse]="!showHphoto" [class.expanded]="showHphoto" class="cqx-image" src="assets/hus.jpg" alt="Photo of a person">
-                <mat-card-content>
-                    <p>
-                        {{"h_self_describe1_h" | langPipe}}<br/>
-                        {{"h_self_describe2_h" | langPipe}}
-                    </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button (click)="showHClick($event)">展开</button>
-                </mat-card-actions>
-            </mat-card>
+            <mat-card-header>
+                <div mat-card-avatar class="cc-header-avatar"></div>
+                <mat-card-title>{{"h_name_h" | langPipe}}</mat-card-title>
+                <mat-card-subtitle>{{"h_self_h" | langPipe}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [class.collapse]="!showHphoto" [class.expanded]="showHphoto" class="cqx-image"
+                src="assets/hus.jpg" alt="Photo of a person">
+            <mat-card-content>
+                <p>
+                    {{"h_self_describe1_h" | langPipe}}<br />
+                    {{"h_self_describe2_h" | langPipe}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button (click)="showHClick($event)">展开</button>
+            </mat-card-actions>
+        </mat-card>
     </mat-list-item>
     <mat-divider></mat-divider>
 
     <mat-list-item class="home-item">
         <mat-card class="home-card">
-                <mat-card-header>
-                    <div mat-card-avatar class="jxb-header-avatar"></div>
-                    <mat-card-title>{{"h_name_j" | langPipe}}</mat-card-title>
-                    <mat-card-subtitle>{{"h_self_j" | langPipe}}</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image [class.collapse]="!showJphoto" [class.expanded]="showJphoto" class="cqx-image" src="assets/jxb2.jpg" alt="Photo of a person">
-                
-                <video #dogVideo [class.collapse]="!showJphoto" [class.expanded]="showJphoto" src="assets/jxb.mp4" class="video-style" controls="controls" id="myVideo">
-                    Your browser does not support the video tag.
-                </video>
+            <mat-card-header>
+                <div mat-card-avatar class="jxb-header-avatar"></div>
+                <mat-card-title>{{"h_name_j" | langPipe}}</mat-card-title>
+                <mat-card-subtitle>{{"h_self_j" | langPipe}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [class.collapse]="!showJphoto" [class.expanded]="showJphoto" class="cqx-image"
+                src="assets/jxb2.jpg" alt="Photo of a person">
 
-                <canvas #dogCanvas width="320" height="300" [class.collapse]="!showJphoto" [class.expanded]="showJphoto" class="canvas-style">
-                    Your browser does not support the canvas element.
-                </canvas>
+            <video #dogVideo [class.collapse]="!showJphoto" [class.expanded]="showJphoto" src="assets/jxb.mp4"
+                class="video-style" controls="controls" id="myVideo">
+                Your browser does not support the video tag.
+            </video>
 
-                 <svg  width="320" height="190" [class.collapse]="!showJphoto" [class.expanded]="showJphoto"> <!-- xmlns="http://www.w3.org/2000/svg" version="1.1" -->
-                    <polygon points="100,10 40,180 190,60 10,60 160,180"
-                    style="fill:red;stroke:blue;stroke-width:3;fill-rule:evenodd;" />
-                 </svg>
-                    
-                <mat-card-content>
-                    <p>
-                        {{"h_self_describe1_j" | langPipe}}<br/>
-                        {{"h_self_describe2_j" | langPipe}}<br/>
-                        {{"h_self_describe3_j" | langPipe}}<br/>
-                        {{"h_self_describe4_j" | langPipe}}<br/>
-                        {{"h_self_describe5_j" | langPipe}}
-                    </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button (click)="showJClick($event)">展开</button>
-                </mat-card-actions>
-            </mat-card>
+            <canvas #dogCanvas width="320" height="300" [class.collapse]="!showJphoto" [class.expanded]="showJphoto"
+                class="canvas-style">
+                Your browser does not support the canvas element.
+            </canvas>
+
+            <mat-card-content>
+                <p>
+                    {{"h_self_describe1_j" | langPipe}}<br />
+                    {{"h_self_describe2_j" | langPipe}}<br />
+                    {{"h_self_describe3_j" | langPipe}}<br />
+                    {{"h_self_describe4_j" | langPipe}}<br />
+                    {{"h_self_describe5_j" | langPipe}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button (click)="showJClick($event)">展开</button>
+            </mat-card-actions>
+        </mat-card>
     </mat-list-item>
 </mat-list>

@@ -134,6 +134,7 @@ a{
     width:180px; 
     height:228px;
     background-color: lightskyblue;
+    margin-right: 20px;
 }
 
 .audio-style{
@@ -144,10 +145,25 @@ a{
 }
 
 .canvas-style{
-    margin-left: 20px;
     width: 180px; 
     height: 228px;
     background-color: lightskyblue;
+    margin-right: 20px;
+}
+
+.svg-style{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 11px;
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.svg-cake{
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 15px;;
 }
 
 .icon-collapse{

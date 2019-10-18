@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import * as d3 from 'd3';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,9 @@ export class HomeComponent implements OnInit {
   showHphoto = false;
   showJphoto = false;
   img: any;
+  dataset = [250, 210, 170, 130, 90];
+  rectHeight = 25;
+  // linear: any;
 
   @ViewChild('dogVideo', { static: true }) private myVid: ElementRef;
   @ViewChild('dogCanvas', { static: true }) private myCanvas: ElementRef;
@@ -19,6 +23,39 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  // ngAfterViewInit() {
+  //   const svg = d3.select('#dogSVG')
+  //     .attr('width', 180)
+  //     .attr('height', 228);
+
+  //   svg.selectAll('rect')
+  //     .data(this.dataset)
+  //     .enter()
+  //     .append('rect')
+  //     .attr('x', function(d, i) {
+  //       return i * 30;
+  //     })
+  //     .attr('y', function(d, i) {
+  //       return 10 + 250 - d;
+  //     })
+  //     .attr('height', function(d) {
+  //       return d;
+  //       // return this.linear(d);
+  //     })
+  //     .attr('width', this.rectHeight - 2)
+  //     .attr('fill', 'steelblue')
+  //     .on('mouseover', function(d, i) {
+  //       d3.select(this)
+  //           .attr('fill', 'yellow');
+  //   })
+  //   .on('mouseout', function(d, i) {
+  //       d3.select(this)
+  //           .transition()
+  //           .duration(500)
+  //           .attr('fill', 'steelblue');
+  //   });
+  // }
 
   showClick($event) {
     this.showMphoto = !this.showMphoto;
